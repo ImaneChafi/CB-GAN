@@ -203,7 +203,7 @@ class Model(object):
             for arg in sorted(vars(self.opts)):
                 log.write(arg + ': ' + str(getattr(self.opts, arg)) + '\n')  # log of arguments
         pprint(self.opts)
-        self.writer = None#SummaryWriter(logdir=self.opts.log_dir)
+        self.writer = SummaryWriter(logdir=self.opts.log_dir)
         '''DATA LOADING'''
         self.log_string('Load dataset ...')
         self.train_dataset = H5DataLoader(self.opts, augment=self.opts.augment)
