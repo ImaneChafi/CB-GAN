@@ -2,31 +2,36 @@ import bpy
 import random
 import os
 
+# Full list
+# tree_types = [
+# "lombardy_poplar",
+# "acer",
+# "palm",
+# "silver_birch",
+# "quaking_aspen",
+# "cambridge_oak",
+# "bamboo",
+# "european_larch",
+# "weeping_willow_o",
+# "balsam_fir",
+# "black_tupelo",
+# "fan_palm",
+# "sphere_tree",
+# "black_oak",
+# "hill_cherry",
+# "sassafras",
+# "douglas_fir",
+# "apple",
+# "small_pine",
+# "weeping_willow"
+# ]
+
 tree_types = [
-"lombardy_poplar",
-"acer",
-"palm",
-"silver_birch",
-"quaking_aspen",
-"cambridge_oak",
-"bamboo",
-"european_larch",
-"weeping_willow_o",
-"balsam_fir",
-"black_tupelo",
-"fan_palm",
-"sphere_tree",
-"black_oak",
-"hill_cherry",
-"sassafras",
-"douglas_fir",
-"apple",
-"small_pine",
-"weeping_willow"
+"acer"
 ]
 
 #Number of trees per type to be generated 
-N = 50
+N = 2000
 dataset_location = "/Users/adrianchang/documents/tree_dataset/"
 
 # Format per tree, all entries are tuples
@@ -34,16 +39,16 @@ dataset_location = "/Users/adrianchang/documents/tree_dataset/"
 # If none, no changes
 constraints = {
 "lombardy_poplar": [(0,5), None ,(10,30), (5,20), None],
-"acer": [(0,10), None ,(2,6), (5,20), (1,5)],
+"acer": [(0,3), None ,(2,6), (3,5), (1,3)],
 "palm": [(20,40), None ,(15,25), None, None],
-"silver_birch": [(0,5), None ,(10,25), (10,20), None],
-"quaking_aspen": [(10,10), None ,(20,35), (10,20), None],
-"cambridge_oak": [(0,10), None ,(10,15), (10,15), (10,15)],
+"silver_birch": [(0,5), None ,(5,10), (5,10), None],
+"quaking_aspen": [(5,5), None ,(10,15), (5,10), None],
+"cambridge_oak": [(0,5), None ,(5,5), (1,1), (1,1)],
 "bamboo": [(0,10), (15,25), (15,25), None, (10,10)],
-"european_larch": [(0,20), None ,(20,40), (20,40), None],
-"weeping_willow_o": [(0,5), None ,(5,15), (5,5), (50,100)],
-"balsam_fir": [(0,10), None ,(40,65), (20,40), (5,10)],
-"black_tupelo": [(0,5), None ,(30,45), (5,15), (5,10)],
+"european_larch": [(0,5), None ,(10,20), (10,20), None],
+"weeping_willow_o": [(0,5), None ,(2,3), (2,3), (10,20)],
+"balsam_fir": [(0,5), None ,(15,20), (10,10), (2,2)],
+"black_tupelo": [(0,5), None ,(15,25), (5,5), (5,5)],
 "fan_palm": [(-45,-30), None ,(20,30), None, None],
 "sphere_tree": [(0,15), None ,(30,60), (50,60), None],
 "black_oak": [(0,15), None ,(15,25), (15,25), None],
@@ -76,7 +81,7 @@ def randomize_params(type): #(Within reason)
 
 def generate_name(i):
     name = list(str(i))
-    while not len(name) == 3:
+    while not len(name) == 4:
         name.insert(0, '0')
     name = ''.join(name)
     return name

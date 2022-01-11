@@ -4,9 +4,9 @@ import os
 import open3d as o3d
 import random
 
-dataset_location = "/Users/adrianchang/documents/"
+dataset_location = "/Users/adrianchang/documents/tree_dataset/acer"
 
-filepath = os.path.join(dataset_location, "tree.h5")
+filepath = os.path.join(dataset_location, "acer.h5")
 f = h5py.File(filepath)
 num = 2048
 data = np.array(f['poisson_%d'%num][:])
