@@ -99,7 +99,7 @@ class Model(object):
 
         if self.ball is None:
             if static:
-                self.ball = np.loadtxt('template/2048.xyz')[:, :3]
+                self.ball = np.loadtxt('template/balls/2048.xyz')[:, :3]
             else:
                 self.ball = np.loadtxt('template/ball2.xyz')[:, :3]
             self.ball = pc_normalize(self.ball)
