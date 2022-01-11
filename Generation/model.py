@@ -187,7 +187,7 @@ class Model(object):
         start_epoch = 1
         # restore check-point if it exits
         if self.opts.restore:
-            could_load, save_epoch = self.load(self.opts.log_dir)
+            could_load, save_epoch = self.load(self.opts.checkpoint_dir)
             if could_load:
                 start_epoch = save_epoch
                 print(" [*] Load SUCCESS")
