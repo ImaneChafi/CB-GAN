@@ -1,5 +1,7 @@
 # Tree Generation with SP-GAN
 
+Project procedurally generates trees and trains [SP-GAN](https://github.com/liruihui/SP-GAN) to generate them. 
+
 Refer to original [README](use_README.md) for model usage
 
 ### Procedural Tree Generation
