@@ -3,35 +3,31 @@ import random
 import os
 
 # Full list
-# tree_types = [
-# "lombardy_poplar",
-# "acer",
-# "palm",
-# "silver_birch",
-# "quaking_aspen",
-# "cambridge_oak",
-# "bamboo",
-# "european_larch",
-# "weeping_willow_o",
-# "balsam_fir",
-# "black_tupelo",
-# "fan_palm",
-# "sphere_tree",
-# "black_oak",
-# "hill_cherry",
-# "sassafras",
-# "douglas_fir",
-# "apple",
-# "small_pine",
-# "weeping_willow"
-# ]
-
 tree_types = [
-"acer"
+"lombardy_poplar",
+"acer",
+"palm",
+"silver_birch",
+"quaking_aspen",
+"cambridge_oak",
+"bamboo",
+"european_larch",
+"weeping_willow_o",
+"balsam_fir",
+"black_tupelo",
+"fan_palm",
+"sphere_tree",
+"black_oak",
+"hill_cherry",
+"sassafras",
+"douglas_fir",
+"apple",
+"small_pine",
+"weeping_willow"
 ]
 
 #Number of trees per type to be generated 
-N = 2000
+N = 100
 dataset_location = "/Users/adrianchang/documents/tree_dataset/"
 
 # Format per tree, all entries are tuples
@@ -54,10 +50,10 @@ constraints = {
 "black_oak": [(0,15), None ,(15,25), (15,25), None],
 "hill_cherry": [(0,5), None ,(15,25), (10,18), (10,15)],
 "sassafras": [(5,10), None ,(10,15), (10,15), (10,15)],
-"douglas_fir": [(20,40), None ,(50,75), (5,20), None],
-"apple": [(0,15), None ,(10,20), (5,15), (2,5)],
-"small_pine": [(50,100), None ,(40,70), None, None],
-"weeping_willow": [(0,10), None ,(10,15), (15,20), (10,30)]
+"douglas_fir": [(0,0), None ,(20,20), (10,10), None],
+"apple": [(0,5), None ,(10,15), (5,6), (2,3)],
+"small_pine": [(0,0), None ,(20,40), None, None],
+"weeping_willow": [(0,5), None ,(5,5), (6,7), (10,10)]
 }
 
 #Create directory if does not exist

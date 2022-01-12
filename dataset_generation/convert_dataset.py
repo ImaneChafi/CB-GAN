@@ -3,35 +3,32 @@ import numpy as np
 import os
 import h5py
 
-# tree_types = [
-# "lombardy_poplar",
-# "acer",
-# "palm",
-# "silver_birch",
-# "quaking_aspen",
-# "cambridge_oak",
-# "bamboo",
-# "european_larch",
-# "weeping_willow_o",
-# "balsam_fir",
-# "black_tupelo",
-# "fan_palm",
-# "sphere_tree",
-# "black_oak",
-# "hill_cherry",
-# "sassafras",
-# "douglas_fir",
-# "apple",
-# "small_pine",
-# "weeping_willow"
-# ]
-
+# Full list
 tree_types = [
-"acer"
+"lombardy_poplar",
+"acer",
+"palm",
+"silver_birch",
+"quaking_aspen",
+"cambridge_oak",
+"bamboo",
+"european_larch",
+"weeping_willow_o",
+"balsam_fir",
+"black_tupelo",
+"fan_palm",
+"sphere_tree",
+"black_oak",
+"hill_cherry",
+"sassafras",
+"douglas_fir",
+"apple",
+"small_pine",
+"weeping_willow"
 ]
 
 #Number of trees per type to be generated 
-N = 2000
+N = 100
 dataset_location = "/Users/adrianchang/documents/tree_dataset/"
 
 def generate_name(i):
@@ -61,16 +58,10 @@ for type in tree_types:
         data[i-1] = xyz
         total[idx] = xyz
         idx += 1
-    print("Writing dataset")
-    filepath = os.path.join(dataset_location, type, type + ".h5")
-    hf = h5py.File(filepath, 'w')
-    hf.create_dataset('poisson_%d'%num, data=data)
-    hf.close()
-    print("Done!")
 
-# print("Writing dataset")
-# filepath = os.path.join(dataset_location, "tree.h5")
-# hf = h5py.File(filepath, 'w')
-# hf.create_dataset('poisson_%d'%num, data=total)
-# hf.close()
-# print("Done!")
+print("Writing dataset")
+filepath = os.path.join(dataset_location, "tree.h5")
+hf = h5py.File(filepath, 'w')
+hf.create_dataset('poisson_%d'%num, data=total, compression="gzip", compression_opts=9)
+hf.close()
+print("Done!")
