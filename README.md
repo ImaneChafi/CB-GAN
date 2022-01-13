@@ -14,7 +14,7 @@ Two datasets were generated. One only uses the acer tree preset in the blender a
 
 ### Training and Results
 
-Two models were trained for 300 epochs. Some results are shown below. For training graphs and more examples see [results](results/plots)
+Two models were trained for 300 epochs. Some results are shown below. For training graphs and more examples see [results](results/plots). The pretrained models can be found [here](https://drive.google.com/drive/folders/1aTxPGRIRphNG5qH-wf_9NpGR3WGPgN0k?usp=sharing)
 
 #### Acer
 ![Part Correspondence](results/plots/draw_correspondence/acer/plot_correspondense_20220111-0839_0.png)
