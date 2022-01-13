@@ -22,3 +22,7 @@ Two models were trained for 300 epochs. Some results are shown below. For traini
 ![Shape Interpolation](results/plots/shape_interpolate/acer/plot_shape_inte_20220111-0840.png)
 
 #### All 20 Trees
+
+![Part Correspondence](results/plots/draw_correspondence/trees/plot_correspondense_20220112-1117_3.png)
+
+![Shape Interpolation](results/plots/shape_interpolate/trees/plot_shape_inte_20220112-1117.png)

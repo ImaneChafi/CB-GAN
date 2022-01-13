@@ -19,21 +19,21 @@ from Generation.config import opts
 if __name__ == '__main__':
 
 
-    opts.pretrain_model_G = "table_G.pth"
-    opts.log_dir = "models"
+    opts.pretrain_model_G = "300_tree_G.pth"
+    opts.log_dir = "log/20220111-2155"
 
     model = Model(opts)
 
     model.draw_correspondense() # draw the correspondense between sphere and shape
-    #model.draw_shape_intepolate() # shape inteporlate
-    #model.draw_part_shape_inte()  # shape inteporlate vs part-wise shape inteporlate
-    #model.draw_part_shape_inte_detail() # shape inteporlate vs multi-path part-wise shape inteporlate
+    model.draw_shape_intepolate() # shape inteporlate
+    model.draw_part_shape_inte()  # shape inteporlate vs part-wise shape inteporlate
+    model.draw_part_shape_inte_detail() # shape inteporlate vs multi-path part-wise shape inteporlate
 
     #model.draw_part_edit() # random change the noise on selected region
-    #model.draw_part_flip() # negative the noise vector along x,y,z zxis
-    #model.draw_edit_inte() # combine for part edit & part/shape interpolate
+    model.draw_part_flip() # negative the noise vector along x,y,z zxis
+    model.draw_edit_inte() # combine for part edit & part/shape interpolate
 
-    #model.draw_part_exchange() # exchange the noise vector of two regions of two shape
+    # model.draw_part_exchange() # exchange the noise vector of two regions of two shape
 
 
 
