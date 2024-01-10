@@ -1,6 +1,6 @@
 # Dental Preparation Generation
 
-Based on [SP-GAN](https://github.com/liruihui/SP-GAN), this project focuses on adding changes to generate dental preparations 
+Based on [SP-GAN](https://github.com/liruihui/SP-GAN), this project focuses on generating dental preparations 
 
 ### Dataset
 
