@@ -1,6 +1,6 @@
 # Dental Crown Bottom GAN-based generation
 
-Based on [SP-GAN](https://github.com/liruihui/SP-GAN), this project focuses on generating dental preparations 
+Based on [SP-GAN](https://github.com/liruihui/SP-GAN), this project focuses on generating dental crown bottoms 
 
 ### Dataset
 
